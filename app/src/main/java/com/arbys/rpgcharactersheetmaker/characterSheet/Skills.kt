@@ -1,9 +1,6 @@
 package com.arbys.rpgcharactersheetmaker.characterSheet
 
 class Skills {
-
-
-
     var acrobatic  = false
     var animalHandling  = false
     var persuasion  = false
@@ -40,8 +37,4 @@ class Skills {
     var _nature = 0
     var _perception = 0
     var _performance = 0
-
-
-
-
 }
