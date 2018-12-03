@@ -7,4 +7,4 @@ class Money: Serializable {
     val valuables = HashMap<String, Valuable>()
 }
 
-class Valuable(var quantity: Int, var cost: Int)
+class Valuable(var quantity: Int, var cost: Int): Serializable

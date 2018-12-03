@@ -17,11 +17,12 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         findViewById<LinearLayout>(R.id.first).setOnClickListener { openCharacter() }
+        createCharacterSheet()
     }
 
     fun openCharacter() {
         val intent = Intent(this, CharacterSheetActivity::class.java).apply {
-//            putExtra("CharacterSheet", cs)
+            putExtra("CharacterSheet", cs)
         }
         startActivity(intent)
     }
