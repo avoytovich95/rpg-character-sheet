@@ -46,145 +46,148 @@
                 android:layout_weight="1"
                 android:gravity="center"
                 android:id="@+id/skillSet1"
-                android:text="here is some text\nhere is some more text\nyet again, more text"
+
         />
       </LinearLayout>
 
       <LinearLayout android:layout_width="match_parent" android:layout_height="match_parent">
         <TextView
+                style="@style/StatText"
                 android:layout_width="8dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:padding="20dp"
                 android:id="@+id/dex"
-                android:text="Dexterity\n18\n+4"/>
+                android:text="Dexterity"/>
 
 
         <EditText
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:inputType="number"
                 android:hint="Enter dex num"/>
 
       </LinearLayout>
       <LinearLayout android:layout_width="match_parent" android:layout_height="match_parent">
 
         <TextView
-                android:layout_width="0dp"
+
+                android:layout_width="1dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:gravity="center"
                 android:id="@+id/skillSet2"
-                android:text="here is some text\nhere is some more text\nyet again, more text"
+
         />
       </LinearLayout>
 
       <LinearLayout android:layout_width="match_parent" android:layout_height="match_parent">
         <TextView
-                android:layout_width="0dp"
+                style="@style/StatText"
+                android:layout_width="8dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:padding="60dp"
+                android:padding="20dp"
                 android:id="@+id/con"
-                android:text="Constitution\n3"/>
+                android:text="Constitution"/>
 
-        <TextView
+        <EditText
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:padding="60dp"
-                android:id="@+id/conDescrip"
-                android:text="Dexterity "/>
+                android:inputType="number"
+                android:hint="Enter con num"/>
 
       </LinearLayout>
       <LinearLayout android:layout_width="match_parent" android:layout_height="match_parent">
 
         <TextView
-                android:layout_width="0dp"
+                android:layout_width="1dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:gravity="center"
                 android:id="@+id/skillSet3"
-                android:text="here is some text\nhere is some more text\nyet again, more text"
+
         />
       </LinearLayout>
 
       <LinearLayout android:layout_width="match_parent" android:layout_height="match_parent">
         <TextView
-                android:layout_width="0dp"
+                style="@style/StatText"
+                android:layout_width="8dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:padding="60dp"
+                android:padding="20dp"
                 android:id="@+id/intel"
-                android:text="Intelligence\n4"/>
+                android:text="Intelligence"/>
 
-        <TextView
+        <EditText
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:padding="60dp"
-                android:id="@+id/intDescrip"
-                android:text="Dexterity "/>
+                android:inputType="number"
+                android:hint="Enter int num"/>
 
       </LinearLayout>
       <LinearLayout android:layout_width="match_parent" android:layout_height="match_parent">
 
         <TextView
-                android:layout_width="0dp"
+                android:layout_width="1dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:gravity="center"
                 android:id="@+id/skillSet4"
-                android:text="here is some text\nhere is some more text\nyet again, more text"
+
         />
       </LinearLayout>
 
       <LinearLayout android:layout_width="match_parent" android:layout_height="match_parent">
         <TextView
-                android:layout_width="0dp"
+                style="@style/StatText"
+                android:layout_width="8dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:padding="60dp"
+                android:padding="20dp"
                 android:id="@+id/wis"
-                android:text="Wisdom\n5"/>
+                android:text="Wisdom"/>
 
-        <TextView
+        <EditText
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:padding="60dp"
-                android:id="@+id/wisDescrip"
-                android:text="Dexterity "/>
+                android:inputType="number"
+                android:hint="Enter wis num"/>
 
       </LinearLayout>
       <LinearLayout android:layout_width="match_parent" android:layout_height="match_parent">
 
         <TextView
-                android:layout_width="0dp"
+                android:layout_width="1dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:gravity="center"
                 android:id="@+id/skillSet5"
-                android:text="here is some text\nhere is some more text\nyet again, more text"
+
         />
       </LinearLayout>
 
       <LinearLayout android:layout_width="match_parent" android:layout_height="match_parent">
         <TextView
-                android:layout_width="0dp"
+                style="@style/StatText"
+                android:layout_width="8dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:padding="60dp"
+                android:padding="20dp"
                 android:id="@+id/charm"
-                android:text="Charisma\n6"/>
+                android:text="Charisma"/>
 
-        <TextView
+        <EditText
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:padding="60dp"
-                android:id="@+id/charmDescrip"
-                android:text="Dexterity "/>
+                android:inputType="number"
+                android:hint="Enter char num"/>
 
       </LinearLayout>
       <LinearLayout android:layout_width="match_parent" android:layout_height="match_parent">
@@ -195,7 +198,7 @@
                 android:layout_weight="1"
                 android:gravity="center"
                 android:id="@+id/skillSet6"
-                android:text="here is some text\nhere is some more text\nyet again, more text"
+
         />
       </LinearLayout>
 
