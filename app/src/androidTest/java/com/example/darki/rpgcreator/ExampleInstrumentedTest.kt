@@ -1,4 +1,4 @@
-package com.arbys.rpgcharactersheetmaker
+package com.example.darki.rpgcreator
 
 import android.support.test.InstrumentationRegistry
 import android.support.test.runner.AndroidJUnit4
@@ -15,10 +15,10 @@ import org.junit.Assert.*
  */
 @RunWith(AndroidJUnit4::class)
 class ExampleInstrumentedTest {
-  @Test
-  fun useAppContext() {
-    // Context of the app under test.
-    val appContext = InstrumentationRegistry.getTargetContext()
-    assertEquals("com.arbys.rpgcharactersheetmaker", appContext.packageName)
-  }
+    @Test
+    fun useAppContext() {
+        // Context of the app under test.
+        val appContext = InstrumentationRegistry.getTargetContext()
+        assertEquals("com.example.darki.rpgcreator", appContext.packageName)
+    }
 }
