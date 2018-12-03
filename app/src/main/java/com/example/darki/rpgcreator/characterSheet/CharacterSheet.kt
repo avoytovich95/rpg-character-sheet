@@ -1,6 +1,8 @@
 package com.arbys.rpgcharactersheetmaker.characterSheet
 
-class CharacterSheet {
+import java.io.Serializable
+
+class CharacterSheet: Serializable {
     val stats = Stats()
     val inventory = ArrayList<Item>()
     val spells = ArrayList<Spell>()
