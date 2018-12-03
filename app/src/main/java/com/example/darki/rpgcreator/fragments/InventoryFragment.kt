@@ -1,36 +1,40 @@
 package com.example.darki.rpgcreator.fragments
 
 import android.content.Context
+import android.net.Uri
 import android.os.Bundle
 import android.support.v4.app.Fragment
-import android.support.v7.widget.GridLayoutManager
-import android.support.v7.widget.LinearLayoutManager
-import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.example.darki.rpgcreator.R
 
-import com.example.darki.rpgcreator.fragments.dummy.DummyContent
-import com.example.darki.rpgcreator.fragments.dummy.DummyContent.DummyItem
+
+// TODO: Rename parameter arguments, choose names that match
+// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
+private const val ARG_PARAM1 = "param1"
+private const val ARG_PARAM2 = "param2"
 
 /**
- * A fragment representing a list of Items.
- * Activities containing this fragment MUST implement the
- * [InventoryFragment.OnListFragmentInteractionListener] interface.
+ * A simple [Fragment] subclass.
+ * Activities that contain this fragment must implement the
+ * [InventoryFragment.OnFragmentInteractionListener] interface
+ * to handle interaction events.
+ * Use the [InventoryFragment.newInstance] factory method to
+ * create an instance of this fragment.
+ *
  */
 class InventoryFragment : Fragment() {
-
-    // TODO: Customize parameters
-    private var columnCount = 1
-
-    private var listener: OnListFragmentInteractionListener? = null
+    // TODO: Rename and change types of parameters
+    private var param1: String? = null
+    private var param2: String? = null
+    private var listener: OnFragmentInteractionListener? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
         arguments?.let {
-            columnCount = it.getInt(ARG_COLUMN_COUNT)
+            param1 = it.getString(ARG_PARAM1)
+            param2 = it.getString(ARG_PARAM2)
         }
     }
 
@@ -38,27 +42,21 @@ class InventoryFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        val view = inflater.inflate(R.layout.fragment_inventory_list, container, false)
+        // Inflate the layout for this fragment
+        return inflater.inflate(R.layout.fragment_inventory, container, false)
+    }
 
-        // Set the adapter
-        if (view is RecyclerView) {
-            with(view) {
-                layoutManager = when {
-                    columnCount <= 1 -> LinearLayoutManager(context)
-                    else -> GridLayoutManager(context, columnCount)
-                }
-                adapter = MyInventoryRecyclerViewAdapter(DummyContent.ITEMS, listener)
-            }
-        }
-        return view
+    // TODO: Rename method, update argument and hook method into UI event
+    fun onButtonPressed(uri: Uri) {
+        listener?.onFragmentInteraction(uri)
     }
 
     override fun onAttach(context: Context) {
         super.onAttach(context)
-        if (context is OnListFragmentInteractionListener) {
+        if (context is OnFragmentInteractionListener) {
             listener = context
         } else {
-            throw RuntimeException(context.toString() + " must implement OnListFragmentInteractionListener")
+            throw RuntimeException(context.toString() + " must implement OnFragmentInteractionListener")
         }
     }
 
@@ -74,26 +72,31 @@ class InventoryFragment : Fragment() {
      * activity.
      *
      *
-     * See the Android Training lesson
-     * [Communicating with Other Fragments](http://developer.android.com/training/basics/fragments/communicating.html)
+     * See the Android Training lesson [Communicating with Other Fragments]
+     * (http://developer.android.com/training/basics/fragments/communicating.html)
      * for more information.
      */
-    interface OnListFragmentInteractionListener {
+    interface OnFragmentInteractionListener {
         // TODO: Update argument type and name
-        fun onListFragmentInteraction(item: DummyItem?)
+        fun onFragmentInteraction(uri: Uri)
     }
 
     companion object {
-
-        // TODO: Customize parameter argument names
-        const val ARG_COLUMN_COUNT = "column-count"
-
-        // TODO: Customize parameter initialization
+        /**
+         * Use this factory method to create a new instance of
+         * this fragment using the provided parameters.
+         *
+         * @param param1 Parameter 1.
+         * @param param2 Parameter 2.
+         * @return A new instance of fragment InventoryFragment.
+         */
+        // TODO: Rename and change types and number of parameters
         @JvmStatic
-        fun newInstance(columnCount: Int) =
+        fun newInstance(param1: String, param2: String) =
             InventoryFragment().apply {
                 arguments = Bundle().apply {
-                    putInt(ARG_COLUMN_COUNT, columnCount)
+                    putString(ARG_PARAM1, param1)
+                    putString(ARG_PARAM2, param2)
                 }
             }
     }
