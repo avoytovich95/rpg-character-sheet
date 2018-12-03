@@ -33,6 +33,7 @@
               android:layout_width="0dp"
               android:layout_height="wrap_content"
               android:layout_weight="1"
+              android:inputType="number"
               android:hint="Enter str num"/>
 
       </LinearLayout>
@@ -51,7 +52,7 @@
 
       <LinearLayout android:layout_width="match_parent" android:layout_height="match_parent">
         <TextView
-                android:layout_width="0dp"
+                android:layout_width="8dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:padding="20dp"
@@ -59,13 +60,11 @@
                 android:text="Dexterity\n18\n+4"/>
 
 
-        <TextView
+        <EditText
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:padding="30dp"
-                android:id="@+id/dexDescrip"
-                android:text="6 Saving Throw\n6 Acrobatics\n6 Slight of Hand\nx Stealth"/>
+                android:hint="Enter dex num"/>
 
       </LinearLayout>
       <LinearLayout android:layout_width="match_parent" android:layout_height="match_parent">
