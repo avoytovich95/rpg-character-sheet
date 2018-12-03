@@ -1,5 +1,6 @@
 package com.example.darki.rpgcreator
 
+import android.content.Intent
 import android.os.Bundle
 import android.support.design.widget.Snackbar
 import android.support.design.widget.NavigationView
@@ -8,14 +9,20 @@ import android.support.v7.app.ActionBarDrawerToggle
 import android.support.v7.app.AppCompatActivity
 import android.view.Menu
 import android.view.MenuItem
+import com.arbys.rpgcharactersheetmaker.characterSheet.CharacterSheet
 import kotlinx.android.synthetic.main.activity_character_sheet.*
 import kotlinx.android.synthetic.main.app_bar_character_sheet.*
 
 class CharacterSheetActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
 
+    lateinit var cs: CharacterSheet
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_character_sheet)
+
+        cs = intent.getSerializableExtra("CharacterSheet") as CharacterSheet
+
         setSupportActionBar(toolbar)
 
         fab.setOnClickListener { view ->
@@ -59,24 +66,13 @@ class CharacterSheetActivity : AppCompatActivity(), NavigationView.OnNavigationI
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
         // Handle navigation view item clicks here.
         when (item.itemId) {
-            R.id.nav_camera -> {
-                // Handle the camera action
-            }
-            R.id.nav_gallery -> {
-
-            }
-            R.id.nav_slideshow -> {
-
-            }
-            R.id.nav_manage -> {
-
-            }
-            R.id.nav_share -> {
-
-            }
-            R.id.nav_send -> {
-
-            }
+            R.id.stats -> {}
+            R.id.inventory -> {}
+            R.id.spells -> {}
+            R.id.money -> {}
+            R.id.equipped -> {}
+            R.id.skills -> {}
+            R.id.character -> {}
         }
 
         drawer_layout.closeDrawer(GravityCompat.START)
