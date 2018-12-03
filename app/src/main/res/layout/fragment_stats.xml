@@ -5,10 +5,140 @@
              android:layout_height="match_parent"
              tools:context=".fragments.StatsFragment">
 
-  <!-- TODO: Update blank fragment layout -->
-  <TextView
-      android:layout_width="match_parent"
-      android:layout_height="match_parent"
-      android:text="@string/hello_blank_fragment"/>
+  <ScrollView
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content">
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+      <LinearLayout
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+      >
+        <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="60dp"
+                android:id="@+id/str"
+                android:text="Strength\n1"/>
+
+        <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:focusable="false"
+                android:text="steve"
+                android:clickable="false"
+        />
+
+
+      </LinearLayout>
+
+      <LinearLayout android:layout_width="match_parent" android:layout_height="match_parent">
+        <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="60dp"
+                android:id="@+id/dex"
+                android:text="Dexterity\n2"/>
+
+
+        <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="60dp"
+                android:id="@+id/dexDescrip"
+                android:text="Dexterity "/>
+
+      </LinearLayout>
+
+      <LinearLayout android:layout_width="match_parent" android:layout_height="match_parent">
+        <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="60dp"
+                android:id="@+id/con"
+                android:text="Constitution\n3"/>
+
+        <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="60dp"
+                android:id="@+id/conDescrip"
+                android:text="Dexterity "/>
+
+      </LinearLayout>
+
+      <LinearLayout android:layout_width="match_parent" android:layout_height="match_parent">
+        <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="60dp"
+                android:id="@+id/intel"
+                android:text="Intelligence\n4"/>
+
+        <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="60dp"
+                android:id="@+id/intDescrip"
+                android:text="Dexterity "/>
+
+      </LinearLayout>
+
+      <LinearLayout android:layout_width="match_parent" android:layout_height="match_parent">
+        <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="60dp"
+                android:id="@+id/wis"
+                android:text="Wisdom\n5"/>
+
+        <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="60dp"
+                android:id="@+id/wisDescrip"
+                android:text="Dexterity "/>
+
+      </LinearLayout>
+
+      <LinearLayout android:layout_width="match_parent" android:layout_height="match_parent">
+        <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="60dp"
+                android:id="@+id/charm"
+                android:text="Charisma\n6"/>
+
+        <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="60dp"
+                android:id="@+id/charmDescrip"
+                android:text="Dexterity "/>
+
+      </LinearLayout>
+
+
+    </LinearLayout>
+
+
+  </ScrollView>
+
 
 </FrameLayout>
