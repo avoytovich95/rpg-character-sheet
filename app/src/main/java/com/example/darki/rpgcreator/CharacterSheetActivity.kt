@@ -14,7 +14,6 @@ import com.arbys.rpgcharactersheetmaker.characterSheet.CharacterSheet
 import com.example.darki.rpgcreator.fragments.StatsFragment
 import kotlinx.android.synthetic.main.activity_character_sheet.*
 import kotlinx.android.synthetic.main.app_bar_character_sheet.*
-import kotlinx.android.synthetic.main.nav_header_character_sheet.*
 
 class CharacterSheetActivity :
     AppCompatActivity(),
