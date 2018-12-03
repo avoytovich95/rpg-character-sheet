@@ -1,6 +1,8 @@
 package com.arbys.rpgcharactersheetmaker.characterSheet
 
-class Item {
+import java.io.Serializable
+
+class Item: Serializable {
     lateinit var itemName: String
     lateinit var itemType: String
     var weight = 0

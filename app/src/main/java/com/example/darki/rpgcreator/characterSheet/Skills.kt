@@ -1,6 +1,8 @@
 package com.arbys.rpgcharactersheetmaker.characterSheet
 
-class Skills {
+import java.io.Serializable
+
+class Skills: Serializable {
     var acrobatic  = false
     var animalHandling  = false
     var persuasion  = false

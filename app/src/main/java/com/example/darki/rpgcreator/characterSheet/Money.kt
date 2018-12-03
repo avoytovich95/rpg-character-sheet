@@ -1,6 +1,8 @@
 package com.arbys.rpgcharactersheetmaker.characterSheet
 
-class Money {
+import java.io.Serializable
+
+class Money: Serializable {
     var coins = 0
     val valuables = HashMap<String, Valuable>()
 }

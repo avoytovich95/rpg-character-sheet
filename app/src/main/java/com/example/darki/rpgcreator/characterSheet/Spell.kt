@@ -1,6 +1,8 @@
 package com.arbys.rpgcharactersheetmaker.characterSheet
 
-class Spell {
+import java.io.Serializable
+
+class Spell: Serializable {
     lateinit var spellName: String
     lateinit var level: String
     lateinit var castingTime: String
