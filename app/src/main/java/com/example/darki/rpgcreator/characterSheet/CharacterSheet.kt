@@ -6,7 +6,7 @@ class CharacterSheet: Serializable {
     val stats = Stats()
     val inventory = ArrayList<Item>()
     val spells = ArrayList<Spell>()
-    val equipment = ArrayList<Spell>()
+    val equipment = ArrayList<Item>()
     val skills = Skills()
 
     lateinit var characterClass: String
