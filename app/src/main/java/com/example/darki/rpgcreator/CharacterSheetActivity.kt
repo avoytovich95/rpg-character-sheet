@@ -15,6 +15,8 @@ import com.example.darki.rpgcreator.fragments.StatsFragment
 import kotlinx.android.synthetic.main.activity_character_sheet.*
 import kotlinx.android.synthetic.main.app_bar_character_sheet.*
 
+const val PARAM_1 = "CharacterSheet"
+
 class CharacterSheetActivity :
     AppCompatActivity(),
     NavigationView.OnNavigationItemSelectedListener,
@@ -32,8 +34,11 @@ class CharacterSheetActivity :
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_character_sheet)
 
-        cs = intent.getSerializableExtra("CharacterSheet") as CharacterSheet
-        findViewById<NavigationView>(R.id.nav_view).getHeaderView(0).findViewById<TextView>(R.id.character_name).text = cs.characterName
+        cs = intent.getSerializableExtra(PARAM_1) as CharacterSheet
+        findViewById<NavigationView>(R.id.nav_view)
+            .getHeaderView(0)
+            .findViewById<TextView>(R.id.character_name)
+            .text = cs.characterName
 
         setSupportActionBar(toolbar)
 
@@ -45,7 +50,7 @@ class CharacterSheetActivity :
 
         nav_view.setNavigationItemSelectedListener(this)
 
-        statsFrag = StatsFragment.newInstance("Hello", "World")
+        statsFrag = StatsFragment.newInstance(cs.stats, cs.skills)
     }
 
     override fun onBackPressed() {
