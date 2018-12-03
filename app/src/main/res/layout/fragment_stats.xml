@@ -3,22 +3,26 @@
              xmlns:tools="http://schemas.android.com/tools"
              android:layout_width="match_parent"
              android:layout_height="match_parent"
-             tools:context=".fragments.StatsFragment">
+             tools:context=".fragments.StatsFragment"
+>
 
   <ScrollView
           android:layout_width="match_parent"
-          android:layout_height="wrap_content">
+          android:layout_height="wrap_content"
+          >
 
     <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            >
 
       <LinearLayout
               android:layout_width="match_parent"
               android:layout_height="match_parent"
       >
         <TextView
+                style="@style/StatText"
                 android:layout_width="8dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -32,12 +36,15 @@
               android:hint="Enter str num"/>
 
       </LinearLayout>
+
       <LinearLayout android:layout_width="match_parent" android:layout_height="match_parent">
 
         <TextView
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:gravity="center"
+                android:id="@+id/skillSet1"
                 android:text="here is some text\nhere is some more text\nyet again, more text"
         />
       </LinearLayout>
@@ -61,6 +68,17 @@
                 android:text="6 Saving Throw\n6 Acrobatics\n6 Slight of Hand\nx Stealth"/>
 
       </LinearLayout>
+      <LinearLayout android:layout_width="match_parent" android:layout_height="match_parent">
+
+        <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:id="@+id/skillSet2"
+                android:text="here is some text\nhere is some more text\nyet again, more text"
+        />
+      </LinearLayout>
 
       <LinearLayout android:layout_width="match_parent" android:layout_height="match_parent">
         <TextView
@@ -79,6 +97,17 @@
                 android:id="@+id/conDescrip"
                 android:text="Dexterity "/>
 
+      </LinearLayout>
+      <LinearLayout android:layout_width="match_parent" android:layout_height="match_parent">
+
+        <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:id="@+id/skillSet3"
+                android:text="here is some text\nhere is some more text\nyet again, more text"
+        />
       </LinearLayout>
 
       <LinearLayout android:layout_width="match_parent" android:layout_height="match_parent">
@@ -99,6 +128,17 @@
                 android:text="Dexterity "/>
 
       </LinearLayout>
+      <LinearLayout android:layout_width="match_parent" android:layout_height="match_parent">
+
+        <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:id="@+id/skillSet4"
+                android:text="here is some text\nhere is some more text\nyet again, more text"
+        />
+      </LinearLayout>
 
       <LinearLayout android:layout_width="match_parent" android:layout_height="match_parent">
         <TextView
@@ -118,6 +158,17 @@
                 android:text="Dexterity "/>
 
       </LinearLayout>
+      <LinearLayout android:layout_width="match_parent" android:layout_height="match_parent">
+
+        <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:id="@+id/skillSet5"
+                android:text="here is some text\nhere is some more text\nyet again, more text"
+        />
+      </LinearLayout>
 
       <LinearLayout android:layout_width="match_parent" android:layout_height="match_parent">
         <TextView
@@ -136,6 +187,17 @@
                 android:id="@+id/charmDescrip"
                 android:text="Dexterity "/>
 
+      </LinearLayout>
+      <LinearLayout android:layout_width="match_parent" android:layout_height="match_parent">
+
+        <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:id="@+id/skillSet6"
+                android:text="here is some text\nhere is some more text\nyet again, more text"
+        />
       </LinearLayout>
 
 
