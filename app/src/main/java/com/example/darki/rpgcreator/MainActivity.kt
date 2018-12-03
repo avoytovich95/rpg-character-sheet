@@ -21,7 +21,7 @@ class MainActivity : AppCompatActivity() {
 
     fun openCharacter() {
         val intent = Intent(this, CharacterSheetActivity::class.java).apply {
-            putExtra("CharacterSheet", cs)
+//            putExtra("CharacterSheet", cs)
         }
         startActivity(intent)
     }
@@ -66,7 +66,7 @@ class MainActivity : AppCompatActivity() {
         }
         cs.spells.run {
             add(Spell().run {
-                
+
                 this
             })
         }
