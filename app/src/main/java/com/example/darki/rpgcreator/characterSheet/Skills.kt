@@ -39,4 +39,5 @@ class Skills: Serializable {
     var _nature = 0
     var _perception = 0
     var _performance = 0
+    var _survival = 0
 }

@@ -8,22 +8,19 @@
 
   <ScrollView
           android:layout_width="match_parent"
-          android:layout_height="wrap_content"
-          >
+          android:layout_height="wrap_content">
 
     <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            >
+            android:orientation="vertical">
 
       <LinearLayout
               android:layout_width="match_parent"
-              android:layout_height="match_parent"
-      >
+              android:layout_height="match_parent">
+
         <TextView
                 style="@style/StatText"
-
                 android:layout_width="8dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -100,6 +97,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:inputType="number"
+                android:id="@+id/constitution"
                 android:hint="Enter con num"/>
 
       </LinearLayout>
@@ -130,6 +128,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:inputType="number"
+                android:id="@+id/intelligence"
                 android:hint="Enter int num"/>
 
       </LinearLayout>
@@ -160,6 +159,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:inputType="number"
+                android:id="@+id/wisdom"
                 android:hint="Enter wis num"/>
 
       </LinearLayout>
@@ -190,6 +190,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:inputType="number"
+                android:id="@+id/charisma"
                 android:hint="Enter char num"/>
 
       </LinearLayout>

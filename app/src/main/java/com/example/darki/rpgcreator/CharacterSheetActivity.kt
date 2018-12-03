@@ -14,6 +14,7 @@ import com.arbys.rpgcharactersheetmaker.characterSheet.CharacterSheet
 import com.example.darki.rpgcreator.fragments.StatsFragment
 import kotlinx.android.synthetic.main.activity_character_sheet.*
 import kotlinx.android.synthetic.main.app_bar_character_sheet.*
+import kotlinx.android.synthetic.main.nav_header_character_sheet.view.*
 
 const val PARAM_1 = "CharacterSheet"
 
@@ -35,10 +36,11 @@ class CharacterSheetActivity :
         setContentView(R.layout.activity_character_sheet)
 
         cs = intent.getSerializableExtra(PARAM_1) as CharacterSheet
-        findViewById<NavigationView>(R.id.nav_view)
+        nav_view
             .getHeaderView(0)
-            .findViewById<TextView>(R.id.character_name)
+            .character_name
             .text = cs.characterName
+
 
         setSupportActionBar(toolbar)
 

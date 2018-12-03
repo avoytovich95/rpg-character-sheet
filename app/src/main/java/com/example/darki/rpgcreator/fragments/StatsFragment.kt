@@ -1,5 +1,6 @@
 package com.example.darki.rpgcreator.fragments
 
+import android.annotation.SuppressLint
 import android.content.Context
 import android.net.Uri
 import android.os.Bundle
@@ -7,13 +8,10 @@ import android.support.v4.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.EditText
-import android.widget.TextView
 import com.arbys.rpgcharactersheetmaker.characterSheet.Skills
 import com.arbys.rpgcharactersheetmaker.characterSheet.Stats
 import com.example.darki.rpgcreator.R
-import kotlinx.android.synthetic.*
-import org.w3c.dom.Text
+import kotlinx.android.synthetic.main.fragment_stats.view.*
 
 
 // TODO: Rename parameter arguments, choose names that match
@@ -34,38 +32,55 @@ private const val ARG_PARAM2 = "param2"
  */
 class StatsFragment: Fragment() {
     // TODO: Rename and change types of parameters
-    private var param1: Stats? = null
-    private var param2: Skills? = null
+    private var stats: Stats? = null
+    private var skills: Skills? = null
 
     private var listener: OnFragmentInteractionListener? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
+
         arguments?.let {
-            param1 = it.getSerializable(ARG_PARAM1) as Stats
-            param2 = it.getSerializable(ARG_PARAM2) as Skills
+            stats = it.getSerializable(ARG_PARAM1) as Stats
+            skills = it.getSerializable(ARG_PARAM2) as Skills
         }
     }
 
-    fun setStats() {
-        view!!.run {
-            findViewById<EditText>(R.id.strength).setText(param1!!.dexteity.toString())
-//                .setText("Google is your friend.", TextView.BufferType.EDITABLE);
-//            findViewById<EditText>(R.id.dexterity).text = param1!!.dexteity.toString()
-        }
-
-    }
-
-    fun setSkills() {
-
-    }
-
+    @SuppressLint("SetTextI18n")
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_stats, container, false)
+        return inflater.inflate(R.layout.fragment_stats, container, false).run {
+            this.strength.setText(stats!!.strength.toString())
+            this.skillSet1.text = "Athletics: ${skills!!._athletics}"
+            this.dexterity.setText(stats!!.dexteity.toString())
+            this.skillSet2.text = "Acrobatics: ${skills!!._acrobatic}\n" +
+                    "Sleight of Hand: ${skills!!._sleightOfHand}\n" +
+                    "Stealth: ${skills!!._stealth}"
+            this.constitution.setText(stats!!.constitution.toString())
+            this.intelligence.setText(stats!!.intelligence.toString())
+            this.skillSet4.text = "Arcana: ${skills!!._arcana}\n" +
+                    "History: ${skills!!._history}\n" +
+                    "Investigation: ${skills!!._investigation}\n" +
+                    "Nature: ${skills!!._nature}\n" +
+                    "Religion: ${skills!!._religion}"
+            this.wisdom.setText(stats!!.wisdom.toString())
+            this.skillSet5.text = "Animal Handling: ${skills!!._animalHandling}\n" +
+                    "Insight: ${skills!!._insight}\n" +
+                    "Medicine: ${skills!!._medicine}\n" +
+                    "Perception: ${skills!!._perception}\n" +
+                    "Survival: ${skills!!._survival}"
+            this.charisma.setText(stats!!.charisma.toString())
+            this.skillSet6.text = "Deception: ${skills!!._deception}\n" +
+                    "Intimidation: ${skills!!._intimidation}\n" +
+                    "Performance: ${skills!!._performance}\n" +
+                    "Persuasion: ${skills!!._persuasion}"
+
+            this
+        }
     }
 
     // TODO: Rename method, update argument and hook method into UI event
