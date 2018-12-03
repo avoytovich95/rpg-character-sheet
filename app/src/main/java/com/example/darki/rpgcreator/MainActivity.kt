@@ -17,6 +17,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         findViewById<LinearLayout>(R.id.first).setOnClickListener { openCharacter() }
+        createCharacterSheet()
     }
 
     fun openCharacter() {
@@ -66,7 +67,7 @@ class MainActivity : AppCompatActivity() {
         }
         cs.spells.run {
             add(Spell().run {
-                
+
                 this
             })
         }

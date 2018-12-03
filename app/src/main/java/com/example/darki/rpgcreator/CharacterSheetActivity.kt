@@ -1,27 +1,40 @@
 package com.example.darki.rpgcreator
 
-import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
-import android.support.design.widget.Snackbar
 import android.support.design.widget.NavigationView
+import android.support.v4.app.Fragment
 import android.support.v4.view.GravityCompat
 import android.support.v7.app.ActionBarDrawerToggle
 import android.support.v7.app.AppCompatActivity
 import android.view.Menu
 import android.view.MenuItem
+import android.widget.TextView
 import com.arbys.rpgcharactersheetmaker.characterSheet.CharacterSheet
+import com.example.darki.rpgcreator.fragments.StatsFragment
 import kotlinx.android.synthetic.main.activity_character_sheet.*
 import kotlinx.android.synthetic.main.app_bar_character_sheet.*
+import kotlinx.android.synthetic.main.nav_header_character_sheet.*
 
-class CharacterSheetActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
+class CharacterSheetActivity :
+    AppCompatActivity(),
+    NavigationView.OnNavigationItemSelectedListener,
+    StatsFragment.OnFragmentInteractionListener {
 
     lateinit var cs: CharacterSheet
+
+    lateinit var statsFrag: Fragment
+    lateinit var inventoryFrag: Fragment
+    lateinit var moneyFrag: Fragment
+    lateinit var equipedFrag: Fragment
+    lateinit var charFrag: Fragment
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_character_sheet)
 
         cs = intent.getSerializableExtra("CharacterSheet") as CharacterSheet
+        findViewById<NavigationView>(R.id.nav_view).getHeaderView(0).findViewById<TextView>(R.id.character_name).text = cs.characterName
 
         setSupportActionBar(toolbar)
 
@@ -32,6 +45,8 @@ class CharacterSheetActivity : AppCompatActivity(), NavigationView.OnNavigationI
         toggle.syncState()
 
         nav_view.setNavigationItemSelectedListener(this)
+
+        statsFrag = StatsFragment.newInstance("Hello", "World")
     }
 
     override fun onBackPressed() {
@@ -43,7 +58,6 @@ class CharacterSheetActivity : AppCompatActivity(), NavigationView.OnNavigationI
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
-        // Inflate the menu; this adds items to the action bar if it is present.
         menuInflater.inflate(R.menu.character_sheet, menu)
         return true
     }
@@ -59,9 +73,13 @@ class CharacterSheetActivity : AppCompatActivity(), NavigationView.OnNavigationI
     }
 
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
-        // Handle navigation view item clicks here.
         when (item.itemId) {
-            R.id.stats -> {}
+            R.id.stats -> {
+                supportFragmentManager
+                    .beginTransaction()
+                    .replace(R.id.fragment_container, statsFrag)
+                    .commit()
+            }
             R.id.inventory -> {}
             R.id.spells -> {}
             R.id.money -> {}
@@ -69,8 +87,10 @@ class CharacterSheetActivity : AppCompatActivity(), NavigationView.OnNavigationI
             R.id.skills -> {}
             R.id.character -> {}
         }
-
         drawer_layout.closeDrawer(GravityCompat.START)
         return true
+    }
+
+    override fun onFragmentInteraction(uri: Uri) {
     }
 }
