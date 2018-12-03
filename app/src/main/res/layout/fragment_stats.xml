@@ -23,12 +23,13 @@
       >
         <TextView
                 style="@style/StatText"
+
                 android:layout_width="8dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:padding="20dp"
                 android:id="@+id/str"
-                android:text="Strength\n"/>
+                android:text="Strength"/>
       <EditText
               android:layout_width="0dp"
               android:layout_height="wrap_content"
