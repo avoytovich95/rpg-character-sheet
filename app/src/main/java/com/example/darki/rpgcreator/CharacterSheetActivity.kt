@@ -25,6 +25,7 @@ class CharacterSheetActivity :
     SPellsFragment.OnFragmentInteractionListener{
 
     lateinit var cs: CharacterSheet
+    lateinit var m: Money
 
     lateinit var statsFrag: Fragment
     lateinit var inventoryFrag: Fragment
@@ -43,6 +44,8 @@ class CharacterSheetActivity :
             .getHeaderView(0)
             .character_name
             .text = cs.characterName
+        
+        m = intent.getSerializableExtra(PARAM_1) as Money
 
 
         setSupportActionBar(toolbar)
@@ -57,6 +60,7 @@ class CharacterSheetActivity :
 
         statsFrag = StatsFragment.newInstance(cs.stats, cs.skills)
         spellFrag = SPellsFragment.newInstance(cs.spells)
+        moneyFrag = MoneyFragments.newInstance(m.coins,"")
     }
 
     override fun onBackPressed() {
@@ -94,7 +98,12 @@ class CharacterSheetActivity :
                     .replace(R.id.fragment_container, spellFrag)
                     .commit()
             }
-            R.id.money -> {}
+            R.id.money -> {
+                supportFragmentManager
+                    .beginTransaction()
+                    .replace(R.id.fragment_container, moneyFrag)
+                    .commit()
+            }
             R.id.equipped -> {}
             R.id.skills -> {}
             R.id.character -> {}
