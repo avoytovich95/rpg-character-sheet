@@ -20,12 +20,14 @@ const val PARAM_1 = "CharacterSheet"
 class CharacterSheetActivity :
     AppCompatActivity(),
     NavigationView.OnNavigationItemSelectedListener,
-    StatsFragment.OnFragmentInteractionListener {
+    StatsFragment.OnFragmentInteractionListener,
+    SPellsFragment.OnFragmentInteractionListener{
 
     lateinit var cs: CharacterSheet
 
     lateinit var statsFrag: Fragment
     lateinit var inventoryFrag: Fragment
+    lateinit var spellFrag: Fragment
     lateinit var moneyFrag: Fragment
     lateinit var equipedFrag: Fragment
     lateinit var charFrag: Fragment
@@ -53,6 +55,7 @@ class CharacterSheetActivity :
         nav_view.setNavigationItemSelectedListener(this)
 
         statsFrag = StatsFragment.newInstance(cs.stats, cs.skills)
+        spellFrag = SPellsFragment.newInstance(cs.spells)
     }
 
     override fun onBackPressed() {
@@ -84,7 +87,12 @@ class CharacterSheetActivity :
                     .commit()
             }
             R.id.inventory -> {}
-            R.id.spells -> {}
+            R.id.spells -> {
+                supportFragmentManager
+                    .beginTransaction()
+                    .replace(R.id.fragment_container, spellFrag)
+                    .commit()
+            }
             R.id.money -> {}
             R.id.equipped -> {}
             R.id.skills -> {}
