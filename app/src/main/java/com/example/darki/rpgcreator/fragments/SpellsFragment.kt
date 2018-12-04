@@ -1,4 +1,4 @@
-package com.example.darki.rpgcreator
+package com.example.darki.rpgcreator.fragments
 
 import android.content.Context
 import android.net.Uri
@@ -8,6 +8,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.arbys.rpgcharactersheetmaker.characterSheet.Spell
+import com.example.darki.rpgcreator.ListAdapter
+import com.example.darki.rpgcreator.R
 import kotlinx.android.synthetic.main.fragment_spells.view.*
 
 
@@ -48,7 +50,8 @@ class SPellsFragment : Fragment() {
             prepareList()
 //            println(headers)
 //            println(spellList)
-            val adapter = ListAdapter(this@SPellsFragment.context!!, headers!!, spellList!!)
+            val adapter =
+                ListAdapter(this@SPellsFragment.context!!, headers!!, spellList!!)
             spells_list.setAdapter(adapter)
             this
         }
