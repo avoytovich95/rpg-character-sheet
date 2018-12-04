@@ -18,34 +18,34 @@
                 android:layout_height="match_parent"
                 android:layout_marginLeft="5dp"
                 android:layout_marginRight="5dp"
-                android:layout_marginTop="5dp">
+                android:layout_marginTop="5dp"
+                >
 
             <!--Name-->
             <TextView
+                    android:textSize="18sp"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:padding="20dp"
-                    android:id="@+id/char_name"
-
-            />
+                    android:id="@+id/char_name"/>
 
             <!--Race-->
             <TextView
+                    android:textSize="18sp"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:padding="20dp"
-                    android:id="@+id/race"
-            />
+                    android:id="@+id/race"/>
             <!--Class-->
             <TextView
+                    android:textSize="18sp"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:padding="20dp"
-                    android:id="@+id/cha_class"
-            />
+                    android:id="@+id/cha_class"/>
 
         </LinearLayout>
 
@@ -58,24 +58,25 @@
 
             <!--Level-->
             <TextView
+                    android:textSize="18sp"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:padding="20dp"
-                    android:id="@+id/lvl"
-            />
+                    android:id="@+id/lvl"/>
 
             <!--Background-->
             <TextView
+                    android:textSize="18sp"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:padding="20dp"
-                    android:id="@+id/backg"
-            />
+                    android:id="@+id/backg"/>
 
             <!--Alignment-->
             <TextView
+                    android:textSize="18sp"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -91,17 +92,21 @@
 
             <!--Experience-->
             <TextView
+                    android:textSize="18sp"
                     android:background="@drawable/borderbtn1"
                     android:layout_marginTop="5dp"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:padding="20dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
                     android:id="@+id/xp"
             />
 
             <!--XP to next lvl-->
             <TextView
+                    android:textSize="18sp"
                     android:background="@drawable/borderbtn1"
                     android:layout_marginTop="5dp"
                     android:layout_width="0dp"
@@ -109,6 +114,8 @@
                     android:layout_weight="1"
                     android:padding="20dp"
                     android:id="@+id/xpNxt"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
             />
 
         </LinearLayout>
@@ -119,15 +126,6 @@
 
 
 </LinearLayout>
-
-
-
-
-
-
-
-
-
 
 
 
