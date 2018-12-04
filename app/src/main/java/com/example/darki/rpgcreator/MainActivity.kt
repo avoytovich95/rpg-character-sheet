@@ -8,6 +8,7 @@ import android.widget.LinearLayout
 import com.arbys.rpgcharactersheetmaker.characterSheet.CharacterSheet
 import com.arbys.rpgcharactersheetmaker.characterSheet.Item
 import com.arbys.rpgcharactersheetmaker.characterSheet.Spell
+import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
 
@@ -16,7 +17,9 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        findViewById<LinearLayout>(R.id.first).setOnClickListener { openCharacter() }
+
+        first.setOnClickListener { openCharacter() }
+
         createCharacterSheet()
     }
 
