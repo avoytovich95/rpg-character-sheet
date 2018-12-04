@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:tools="http://schemas.android.com/tools"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             android:background="@drawable/gradient"
+             tools:context=".fragments.MoneyFragments">
+
+    <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+    >
+
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+        >
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                <TextView
+                        style="@style/MoneyText"
+                        android:layout_width="8dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:padding="20dp"
+                        android:id="@+id/str"
+                        android:text="Money"/>
+
+                <EditText
+                        android:id="@+id/money"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:inputType="number"
+                        android:hint="Enter str num"/>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+
+                <Spinner android:id="@+id/sp0"
+                         android:layout_width="match_parent"
+                         android:layout_height="50dp"
+                         android:layout_weight="1"
+                         android:background="@android:drawable/btn_dropdown">
+
+                </Spinner>
+
+
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+
+</FrameLayout>
