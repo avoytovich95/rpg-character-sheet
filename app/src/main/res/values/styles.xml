@@ -31,6 +31,14 @@
   <style name="charText">
     <item name="android:textSize">10sp</item>
   </style>
+  
+  <style name="MoneyText">
+    <item name="android:textSize">25sp</item>
+    <item name="android:shadowColor">@color/shadow</item>
+    <item name="android:shadowDx">5</item>
+    <item name="android:shadowDy">5</item>
+    <item name="android:shadowRadius">50</item>
+  </style>
 
 
 

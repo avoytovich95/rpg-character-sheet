@@ -10,7 +10,9 @@ import android.support.v7.app.AppCompatActivity
 import android.view.Menu
 import android.view.MenuItem
 import com.arbys.rpgcharactersheetmaker.characterSheet.CharacterSheet
+import com.arbys.rpgcharactersheetmaker.characterSheet.Money
 import com.example.darki.rpgcreator.fragments.InventoryFragment
+import com.example.darki.rpgcreator.fragments.MoneyFragments
 import com.example.darki.rpgcreator.fragments.SPellsFragment
 import com.example.darki.rpgcreator.fragments.StatsFragment
 import kotlinx.android.synthetic.main.activity_character_sheet.*
@@ -27,6 +29,7 @@ class CharacterSheetActivity :
     InventoryFragment.OnFragmentInteractionListener{
 
     lateinit var cs: CharacterSheet
+    lateinit var m: Money
 
     lateinit var statsFrag: Fragment
     lateinit var inventoryFrag: Fragment
@@ -45,6 +48,8 @@ class CharacterSheetActivity :
             .getHeaderView(0)
             .character_name
             .text = cs.characterName
+        
+        m = intent.getSerializableExtra(PARAM_1) as Money
 
 
         setSupportActionBar(toolbar)
@@ -60,6 +65,7 @@ class CharacterSheetActivity :
         statsFrag = StatsFragment.newInstance(cs.stats, cs.skills)
         spellFrag = SPellsFragment.newInstance(cs.spells)
         inventoryFrag = InventoryFragment.newInstance(cs.inventory)
+        moneyFrag = MoneyFragments.newInstance(m.coins,"")
     }
 
     override fun onBackPressed() {
@@ -102,7 +108,12 @@ class CharacterSheetActivity :
                     .replace(R.id.fragment_container, spellFrag)
                     .commit()
             }
-            R.id.money -> {}
+            R.id.money -> {
+                supportFragmentManager
+                    .beginTransaction()
+                    .replace(R.id.fragment_container, moneyFrag)
+                    .commit()
+            }
             R.id.equipped -> {}
             R.id.skills -> {}
             R.id.character -> {}
