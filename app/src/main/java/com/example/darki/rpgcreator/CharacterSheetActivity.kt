@@ -11,10 +11,7 @@ import android.view.Menu
 import android.view.MenuItem
 import com.arbys.rpgcharactersheetmaker.characterSheet.CharacterSheet
 import com.arbys.rpgcharactersheetmaker.characterSheet.Money
-import com.example.darki.rpgcreator.fragments.InventoryFragment
-import com.example.darki.rpgcreator.fragments.MoneyFragments
-import com.example.darki.rpgcreator.fragments.SPellsFragment
-import com.example.darki.rpgcreator.fragments.StatsFragment
+import com.example.darki.rpgcreator.fragments.*
 import kotlinx.android.synthetic.main.activity_character_sheet.*
 import kotlinx.android.synthetic.main.app_bar_character_sheet.*
 import kotlinx.android.synthetic.main.nav_header_character_sheet.view.*
@@ -26,7 +23,8 @@ class CharacterSheetActivity :
     NavigationView.OnNavigationItemSelectedListener,
     StatsFragment.OnFragmentInteractionListener,
     SPellsFragment.OnFragmentInteractionListener,
-    InventoryFragment.OnFragmentInteractionListener{
+    InventoryFragment.OnFragmentInteractionListener,
+    CharacterFragment.OnFragmentInteractionListener{
 
     lateinit var cs: CharacterSheet
     lateinit var m: Money
@@ -41,15 +39,13 @@ class CharacterSheetActivity :
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_character_sheet)
-
         cs = intent.getSerializableExtra(PARAM_1) as CharacterSheet
+
         title = cs.characterName
         nav_view
             .getHeaderView(0)
             .character_name
             .text = cs.characterName
-        
-        m = intent.getSerializableExtra(PARAM_1) as Money
 
 
         setSupportActionBar(toolbar)
@@ -65,7 +61,14 @@ class CharacterSheetActivity :
         statsFrag = StatsFragment.newInstance(cs.stats, cs.skills)
         spellFrag = SPellsFragment.newInstance(cs.spells)
         inventoryFrag = InventoryFragment.newInstance(cs.inventory)
-        moneyFrag = MoneyFragments.newInstance(m.coins,"")
+        charFrag = CharacterFragment.newInstance(cs)
+//        moneyFrag = MoneyFragments.newInstance(m.coins,"")
+
+
+        supportFragmentManager
+            .beginTransaction()
+            .replace(R.id.fragment_container, charFrag)
+            .commit()
     }
 
     override fun onBackPressed() {
@@ -109,14 +112,19 @@ class CharacterSheetActivity :
                     .commit()
             }
             R.id.money -> {
-                supportFragmentManager
-                    .beginTransaction()
-                    .replace(R.id.fragment_container, moneyFrag)
-                    .commit()
+//                supportFragmentManager
+//                    .beginTransaction()
+//                    .replace(R.id.fragment_container, moneyFrag)
+//                    .commit()
             }
             R.id.equipped -> {}
             R.id.skills -> {}
-            R.id.character -> {}
+            R.id.character -> {
+                supportFragmentManager
+                    .beginTransaction()
+                    .replace(R.id.fragment_container, charFrag)
+                    .commit()
+            }
         }
         drawer_layout.closeDrawer(GravityCompat.START)
         return true

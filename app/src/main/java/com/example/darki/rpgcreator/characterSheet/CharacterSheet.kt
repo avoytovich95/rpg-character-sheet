@@ -9,11 +9,13 @@ class CharacterSheet: Serializable {
     val equipment = ArrayList<Item>()
     val skills = Skills()
 
-    lateinit var characterClass: String
-    lateinit var characterBackground: String
-    lateinit var characterName: String
-    lateinit var faction: String
-    lateinit var race: String
-    lateinit var allignment: String
-    lateinit var experiace: String
+    var characterClass = ""
+    var characterBackground =""
+    var characterName = ""
+    var faction =""
+    var race = ""
+    var allignment = ""
+    var experiace = ""
+    var epxerianceNeeded = ""
+    var level = ""
 }

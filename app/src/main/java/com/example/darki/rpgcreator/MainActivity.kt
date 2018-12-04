@@ -33,7 +33,8 @@ class MainActivity : AppCompatActivity() {
     fun createCharacterSheet() {
         cs.allignment = ""
         cs.characterBackground = "Sailor"
-        cs.characterClass = "Rogue 1"
+        cs.characterClass = "Rogue"
+        cs.level = "1"
         cs.characterName = "Riker"
         cs.equipment.run {
             add(Item().run {
