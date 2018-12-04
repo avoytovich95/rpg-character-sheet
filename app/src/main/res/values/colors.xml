@@ -9,7 +9,8 @@
     <color name="shadow">#8b2929</color>
     <color name="names">#deb61313</color>
 
-    <color name="charc">#ed202791</color>
+    <color name="charc">#ed353cb4</color>
+    <color name="charc2">#edcaba09</color>
 
 
 </resources>
