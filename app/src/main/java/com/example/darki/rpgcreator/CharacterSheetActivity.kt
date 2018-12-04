@@ -36,6 +36,7 @@ class CharacterSheetActivity :
         setContentView(R.layout.activity_character_sheet)
 
         cs = intent.getSerializableExtra(PARAM_1) as CharacterSheet
+        title = cs.characterName
         nav_view
             .getHeaderView(0)
             .character_name
