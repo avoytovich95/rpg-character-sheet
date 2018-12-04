@@ -10,6 +10,7 @@ import android.support.v7.app.AppCompatActivity
 import android.view.Menu
 import android.view.MenuItem
 import com.arbys.rpgcharactersheetmaker.characterSheet.CharacterSheet
+import com.example.darki.rpgcreator.fragments.InventoryFragment
 import com.example.darki.rpgcreator.fragments.SPellsFragment
 import com.example.darki.rpgcreator.fragments.StatsFragment
 import kotlinx.android.synthetic.main.activity_character_sheet.*
@@ -22,7 +23,8 @@ class CharacterSheetActivity :
     AppCompatActivity(),
     NavigationView.OnNavigationItemSelectedListener,
     StatsFragment.OnFragmentInteractionListener,
-    SPellsFragment.OnFragmentInteractionListener{
+    SPellsFragment.OnFragmentInteractionListener,
+    InventoryFragment.OnFragmentInteractionListener{
 
     lateinit var cs: CharacterSheet
 
@@ -57,6 +59,7 @@ class CharacterSheetActivity :
 
         statsFrag = StatsFragment.newInstance(cs.stats, cs.skills)
         spellFrag = SPellsFragment.newInstance(cs.spells)
+        inventoryFrag = InventoryFragment.newInstance(cs.inventory)
     }
 
     override fun onBackPressed() {
@@ -87,7 +90,12 @@ class CharacterSheetActivity :
                     .replace(R.id.fragment_container, statsFrag)
                     .commit()
             }
-            R.id.inventory -> {}
+            R.id.inventory -> {
+                supportFragmentManager
+                    .beginTransaction()
+                    .replace(R.id.fragment_container, inventoryFrag)
+                    .commit()
+            }
             R.id.spells -> {
                 supportFragmentManager
                     .beginTransaction()

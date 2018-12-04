@@ -6,232 +6,231 @@
              tools:context=".fragments.InventoryFragment">
 
   <ScrollView
-  android:layout_width="match_parent"
-  android:layout_height="wrap_content"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
   >
 
-  <LinearLayout
-          android:layout_width="match_parent"
-          android:layout_height="wrap_content"
-          android:orientation="vertical"
-  >
-  <LinearLayout
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+    >
+      <LinearLayout
           android:layout_width="match_parent"
           android:layout_height="match_parent">
 
-      <Spinner android:id="@+id/sp0"
-               android:layout_width="0dp"
-               android:layout_height="50dp"
-               android:layout_weight="1"
-               android:background="@android:drawable/btn_dropdown">
+        <Spinner android:id="@+id/sp0"
+                 android:layout_width="0dp"
+                 android:layout_height="50dp"
+                 android:layout_weight="1"
+                 android:background="@android:drawable/btn_dropdown">
 
-      </Spinner>
-
-
-  </LinearLayout>
-      <LinearLayout
-              android:layout_width="match_parent"
-              android:layout_height="match_parent">
-
-          <Spinner android:id="@+id/sp1"
-                   android:layout_width="0dp"
-                   android:layout_height="50dp"
-                   android:layout_weight="1"
-                   android:background="@android:drawable/btn_dropdown">
-
-          </Spinner>
+        </Spinner>
 
 
       </LinearLayout>
       <LinearLayout
-              android:layout_width="match_parent"
-              android:layout_height="match_parent">
+          android:layout_width="match_parent"
+          android:layout_height="match_parent">
 
-          <Spinner android:id="@+id/sp2"
-                   android:layout_width="0dp"
-                   android:layout_height="50dp"
-                   android:layout_weight="1"
-                   android:background="@android:drawable/btn_dropdown">
+        <Spinner android:id="@+id/sp1"
+                 android:layout_width="0dp"
+                 android:layout_height="50dp"
+                 android:layout_weight="1"
+                 android:background="@android:drawable/btn_dropdown">
 
-          </Spinner>
-
-
-      </LinearLayout>
-      <LinearLayout
-              android:layout_width="match_parent"
-              android:layout_height="match_parent">
-
-          <Spinner android:id="@+id/sp3"
-                   android:layout_width="0dp"
-                   android:layout_height="50dp"
-                   android:layout_weight="1"
-                   android:background="@android:drawable/btn_dropdown">
-
-          </Spinner>
+        </Spinner>
 
 
       </LinearLayout>
       <LinearLayout
-              android:layout_width="match_parent"
-              android:layout_height="match_parent">
+          android:layout_width="match_parent"
+          android:layout_height="match_parent">
 
-          <Spinner android:id="@+id/sp4"
-                   android:layout_width="0dp"
-                   android:layout_height="50dp"
-                   android:layout_weight="1"
-                   android:background="@android:drawable/btn_dropdown">
+        <Spinner android:id="@+id/sp2"
+                 android:layout_width="0dp"
+                 android:layout_height="50dp"
+                 android:layout_weight="1"
+                 android:background="@android:drawable/btn_dropdown">
 
-          </Spinner>
-
-
-      </LinearLayout>
-      <LinearLayout
-              android:layout_width="match_parent"
-              android:layout_height="match_parent">
-
-          <Spinner android:id="@+id/sp5"
-                   android:layout_width="0dp"
-                   android:layout_height="50dp"
-                   android:layout_weight="1"
-                   android:background="@android:drawable/btn_dropdown">
-
-          </Spinner>
+        </Spinner>
 
 
       </LinearLayout>
-      <LinearLayout
-              android:layout_width="match_parent"
-              android:layout_height="match_parent">
+      <!--<LinearLayout-->
+          <!--android:layout_width="match_parent"-->
+          <!--android:layout_height="match_parent">-->
 
-          <Spinner android:id="@+id/sp6"
-                   android:layout_width="0dp"
-                   android:layout_height="50dp"
-                   android:layout_weight="1"
-                   android:background="@android:drawable/btn_dropdown">
+        <!--<Spinner android:id="@+id/sp3"-->
+                 <!--android:layout_width="0dp"-->
+                 <!--android:layout_height="50dp"-->
+                 <!--android:layout_weight="1"-->
+                 <!--android:background="@android:drawable/btn_dropdown">-->
 
-          </Spinner>
-
-
-      </LinearLayout>
-      <LinearLayout
-              android:layout_width="match_parent"
-              android:layout_height="match_parent">
-
-          <Spinner android:id="@+id/sp7"
-                   android:layout_width="0dp"
-                   android:layout_height="50dp"
-                   android:layout_weight="1"
-                   android:background="@android:drawable/btn_dropdown">
-
-          </Spinner>
+        <!--</Spinner>-->
 
 
-      </LinearLayout>
-      <LinearLayout
-              android:layout_width="match_parent"
-              android:layout_height="match_parent">
+      <!--</LinearLayout>-->
+      <!--<LinearLayout-->
+          <!--android:layout_width="match_parent"-->
+          <!--android:layout_height="match_parent">-->
 
-          <Spinner android:id="@+id/sp8"
-                   android:layout_width="0dp"
-                   android:layout_height="50dp"
-                   android:layout_weight="1"
-                   android:background="@android:drawable/btn_dropdown">
+        <!--<Spinner android:id="@+id/sp4"-->
+                 <!--android:layout_width="0dp"-->
+                 <!--android:layout_height="50dp"-->
+                 <!--android:layout_weight="1"-->
+                 <!--android:background="@android:drawable/btn_dropdown">-->
 
-          </Spinner>
-
-
-      </LinearLayout>
-      <LinearLayout
-              android:layout_width="match_parent"
-              android:layout_height="match_parent">
-
-          <Spinner android:id="@+id/sp9"
-                   android:layout_width="0dp"
-                   android:layout_height="50dp"
-                   android:layout_weight="1"
-                   android:background="@android:drawable/btn_dropdown">
-
-          </Spinner>
+        <!--</Spinner>-->
 
 
-      </LinearLayout>
-      <LinearLayout
-              android:layout_width="match_parent"
-              android:layout_height="match_parent">
+      <!--</LinearLayout>-->
+      <!--<LinearLayout-->
+          <!--android:layout_width="match_parent"-->
+          <!--android:layout_height="match_parent">-->
 
-          <Spinner android:id="@+id/sp10"
-                   android:layout_width="0dp"
-                   android:layout_height="50dp"
-                   android:layout_weight="1"
-                   android:background="@android:drawable/btn_dropdown">
+        <!--<Spinner android:id="@+id/sp5"-->
+                 <!--android:layout_width="0dp"-->
+                 <!--android:layout_height="50dp"-->
+                 <!--android:layout_weight="1"-->
+                 <!--android:background="@android:drawable/btn_dropdown">-->
 
-          </Spinner>
-
-
-      </LinearLayout>
-      <LinearLayout
-              android:layout_width="match_parent"
-              android:layout_height="match_parent">
-
-          <Spinner android:id="@+id/sp11"
-                   android:layout_width="0dp"
-                   android:layout_height="50dp"
-                   android:layout_weight="1"
-                   android:background="@android:drawable/btn_dropdown">
-
-          </Spinner>
+        <!--</Spinner>-->
 
 
-      </LinearLayout>
-      <LinearLayout
-              android:layout_width="match_parent"
-              android:layout_height="match_parent">
+      <!--</LinearLayout>-->
+      <!--<LinearLayout-->
+          <!--android:layout_width="match_parent"-->
+          <!--android:layout_height="match_parent">-->
 
-          <Spinner android:id="@+id/sp12"
-                   android:layout_width="0dp"
-                   android:layout_height="50dp"
-                   android:layout_weight="1"
-                   android:background="@android:drawable/btn_dropdown">
+        <!--<Spinner android:id="@+id/sp6"-->
+                 <!--android:layout_width="0dp"-->
+                 <!--android:layout_height="50dp"-->
+                 <!--android:layout_weight="1"-->
+                 <!--android:background="@android:drawable/btn_dropdown">-->
 
-          </Spinner>
-
-
-      </LinearLayout>
-      <LinearLayout
-              android:layout_width="match_parent"
-              android:layout_height="match_parent">
-
-          <Spinner android:id="@+id/sp13"
-                   android:layout_width="0dp"
-                   android:layout_height="50dp"
-                   android:layout_weight="1"
-                   android:background="@android:drawable/btn_dropdown">
-
-          </Spinner>
+        <!--</Spinner>-->
 
 
-      </LinearLayout>
-      <LinearLayout
-              android:layout_width="match_parent"
-              android:layout_height="match_parent">
+      <!--</LinearLayout>-->
+      <!--<LinearLayout-->
+          <!--android:layout_width="match_parent"-->
+          <!--android:layout_height="match_parent">-->
 
-          <Spinner android:id="@+id/sp14"
-                   android:layout_width="0dp"
-                   android:layout_height="50dp"
-                   android:layout_weight="1"
-                   android:background="@android:drawable/btn_dropdown">
+        <!--<Spinner android:id="@+id/sp7"-->
+                 <!--android:layout_width="0dp"-->
+                 <!--android:layout_height="50dp"-->
+                 <!--android:layout_weight="1"-->
+                 <!--android:background="@android:drawable/btn_dropdown">-->
 
-          </Spinner>
-
-
-      </LinearLayout>
+        <!--</Spinner>-->
 
 
+      <!--</LinearLayout>-->
+      <!--<LinearLayout-->
+          <!--android:layout_width="match_parent"-->
+          <!--android:layout_height="match_parent">-->
 
-  </LinearLayout>
+        <!--<Spinner android:id="@+id/sp8"-->
+                 <!--android:layout_width="0dp"-->
+                 <!--android:layout_height="50dp"-->
+                 <!--android:layout_weight="1"-->
+                 <!--android:background="@android:drawable/btn_dropdown">-->
+
+        <!--</Spinner>-->
 
 
-</ScrollView>
+      <!--</LinearLayout>-->
+      <!--<LinearLayout-->
+          <!--android:layout_width="match_parent"-->
+          <!--android:layout_height="match_parent">-->
+
+        <!--<Spinner android:id="@+id/sp9"-->
+                 <!--android:layout_width="0dp"-->
+                 <!--android:layout_height="50dp"-->
+                 <!--android:layout_weight="1"-->
+                 <!--android:background="@android:drawable/btn_dropdown">-->
+
+        <!--</Spinner>-->
+
+
+      <!--</LinearLayout>-->
+      <!--<LinearLayout-->
+          <!--android:layout_width="match_parent"-->
+          <!--android:layout_height="match_parent">-->
+
+        <!--<Spinner android:id="@+id/sp10"-->
+                 <!--android:layout_width="0dp"-->
+                 <!--android:layout_height="50dp"-->
+                 <!--android:layout_weight="1"-->
+                 <!--android:background="@android:drawable/btn_dropdown">-->
+
+        <!--</Spinner>-->
+
+
+      <!--</LinearLayout>-->
+      <!--<LinearLayout-->
+          <!--android:layout_width="match_parent"-->
+          <!--android:layout_height="match_parent">-->
+
+        <!--<Spinner android:id="@+id/sp11"-->
+                 <!--android:layout_width="0dp"-->
+                 <!--android:layout_height="50dp"-->
+                 <!--android:layout_weight="1"-->
+                 <!--android:background="@android:drawable/btn_dropdown">-->
+
+        <!--</Spinner>-->
+
+
+      <!--</LinearLayout>-->
+      <!--<LinearLayout-->
+          <!--android:layout_width="match_parent"-->
+          <!--android:layout_height="match_parent">-->
+
+        <!--<Spinner android:id="@+id/sp12"-->
+                 <!--android:layout_width="0dp"-->
+                 <!--android:layout_height="50dp"-->
+                 <!--android:layout_weight="1"-->
+                 <!--android:background="@android:drawable/btn_dropdown">-->
+
+        <!--</Spinner>-->
+
+
+      <!--</LinearLayout>-->
+      <!--<LinearLayout-->
+          <!--android:layout_width="match_parent"-->
+          <!--android:layout_height="match_parent">-->
+
+        <!--<Spinner android:id="@+id/sp13"-->
+                 <!--android:layout_width="0dp"-->
+                 <!--android:layout_height="50dp"-->
+                 <!--android:layout_weight="1"-->
+                 <!--android:background="@android:drawable/btn_dropdown">-->
+
+        <!--</Spinner>-->
+
+
+      <!--</LinearLayout>-->
+      <!--<LinearLayout-->
+          <!--android:layout_width="match_parent"-->
+          <!--android:layout_height="match_parent">-->
+
+        <!--<Spinner android:id="@+id/sp14"-->
+                 <!--android:layout_width="0dp"-->
+                 <!--android:layout_height="50dp"-->
+                 <!--android:layout_weight="1"-->
+                 <!--android:background="@android:drawable/btn_dropdown">-->
+
+        <!--</Spinner>-->
+
+
+      <!--</LinearLayout>-->
+
+
+    </LinearLayout>
+
+
+  </ScrollView>
 
 
 </FrameLayout>

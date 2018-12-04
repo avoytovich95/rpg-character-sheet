@@ -8,19 +8,21 @@ import android.support.v4.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ArrayAdapter
 import android.widget.Spinner
 import com.arbys.rpgcharactersheetmaker.characterSheet.CharacterSheet
 import com.arbys.rpgcharactersheetmaker.characterSheet.Item
 import com.example.darki.rpgcreator.R
 import kotlinx.android.synthetic.main.activity_character_sheet.*
 import kotlinx.android.synthetic.main.app_bar_character_sheet.*
+import kotlinx.android.synthetic.main.fragment_inventory.view.*
 import kotlinx.android.synthetic.main.nav_header_character_sheet.view.*
+import kotlinx.android.synthetic.main.list_item.*
 
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
 private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
 
 /**
  * A simple [Fragment] subclass.
@@ -32,18 +34,13 @@ private const val ARG_PARAM2 = "param2"
  *
  */
 class InventoryFragment : Fragment() {
-    // TODO: Rename and change types of parameters
-    private var param1: String? = null
-    private var param2: String? = null
+    private var items: ArrayList<Item>? = null
     private var listener: OnFragmentInteractionListener? = null
-    //var items: ArrayList<Item> = ArrayList()
-    //var cs: CharacterSheet()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         arguments?.let {
-            param1 = it.getString(ARG_PARAM1)
-            param2 = it.getString(ARG_PARAM2)
+            items = it.getSerializable(ARG_PARAM1) as ArrayList<Item>
         }
 
         //items.add()
@@ -55,7 +52,13 @@ class InventoryFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_inventory, container, false)
+        return inflater.inflate(R.layout.fragment_inventory, container, false).run {
+            val adapter = ArrayAdapter<Item>(this@InventoryFragment.context!!, android.R.layout.simple_spinner_item, items!!.toMutableList())
+            sp0!!.adapter = adapter
+            sp1!!.adapter = adapter
+            sp2!!.adapter = adapter
+            this
+        }
     }
 
     // TODO: Rename method, update argument and hook method into UI event
@@ -104,11 +107,10 @@ class InventoryFragment : Fragment() {
          */
         // TODO: Rename and change types and number of parameters
         @JvmStatic
-        fun newInstance(param1: String, param2: String) =
+        fun newInstance(param1: ArrayList<Item>) =
             InventoryFragment().apply {
                 arguments = Bundle().apply {
-                    putString(ARG_PARAM1, param1)
-                    putString(ARG_PARAM2, param2)
+                    putSerializable(ARG_PARAM1, param1)
                 }
             }
     }
