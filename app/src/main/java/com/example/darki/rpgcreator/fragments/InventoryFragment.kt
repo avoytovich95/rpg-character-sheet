@@ -1,5 +1,6 @@
 package com.example.darki.rpgcreator.fragments
 
+import android.content.ClipData
 import android.content.Context
 import android.net.Uri
 import android.os.Bundle
@@ -8,7 +9,12 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Spinner
+import com.arbys.rpgcharactersheetmaker.characterSheet.CharacterSheet
+import com.arbys.rpgcharactersheetmaker.characterSheet.Item
 import com.example.darki.rpgcreator.R
+import kotlinx.android.synthetic.main.activity_character_sheet.*
+import kotlinx.android.synthetic.main.app_bar_character_sheet.*
+import kotlinx.android.synthetic.main.nav_header_character_sheet.view.*
 
 
 // TODO: Rename parameter arguments, choose names that match
@@ -30,6 +36,8 @@ class InventoryFragment : Fragment() {
     private var param1: String? = null
     private var param2: String? = null
     private var listener: OnFragmentInteractionListener? = null
+    //var items: ArrayList<Item> = ArrayList()
+    //var cs: CharacterSheet()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -37,6 +45,9 @@ class InventoryFragment : Fragment() {
             param1 = it.getString(ARG_PARAM1)
             param2 = it.getString(ARG_PARAM2)
         }
+
+        //items.add()
+
     }
 
     override fun onCreateView(
@@ -101,5 +112,4 @@ class InventoryFragment : Fragment() {
                 }
             }
     }
-
 }

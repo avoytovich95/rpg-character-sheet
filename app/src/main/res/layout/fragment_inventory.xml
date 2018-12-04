@@ -29,6 +29,203 @@
 
 
   </LinearLayout>
+      <LinearLayout
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+          <Spinner android:id="@+id/sp1"
+                   android:layout_width="0dp"
+                   android:layout_height="50dp"
+                   android:layout_weight="1"
+                   android:background="@android:drawable/btn_dropdown">
+
+          </Spinner>
+
+
+      </LinearLayout>
+      <LinearLayout
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+          <Spinner android:id="@+id/sp2"
+                   android:layout_width="0dp"
+                   android:layout_height="50dp"
+                   android:layout_weight="1"
+                   android:background="@android:drawable/btn_dropdown">
+
+          </Spinner>
+
+
+      </LinearLayout>
+      <LinearLayout
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+          <Spinner android:id="@+id/sp3"
+                   android:layout_width="0dp"
+                   android:layout_height="50dp"
+                   android:layout_weight="1"
+                   android:background="@android:drawable/btn_dropdown">
+
+          </Spinner>
+
+
+      </LinearLayout>
+      <LinearLayout
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+          <Spinner android:id="@+id/sp4"
+                   android:layout_width="0dp"
+                   android:layout_height="50dp"
+                   android:layout_weight="1"
+                   android:background="@android:drawable/btn_dropdown">
+
+          </Spinner>
+
+
+      </LinearLayout>
+      <LinearLayout
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+          <Spinner android:id="@+id/sp5"
+                   android:layout_width="0dp"
+                   android:layout_height="50dp"
+                   android:layout_weight="1"
+                   android:background="@android:drawable/btn_dropdown">
+
+          </Spinner>
+
+
+      </LinearLayout>
+      <LinearLayout
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+          <Spinner android:id="@+id/sp6"
+                   android:layout_width="0dp"
+                   android:layout_height="50dp"
+                   android:layout_weight="1"
+                   android:background="@android:drawable/btn_dropdown">
+
+          </Spinner>
+
+
+      </LinearLayout>
+      <LinearLayout
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+          <Spinner android:id="@+id/sp7"
+                   android:layout_width="0dp"
+                   android:layout_height="50dp"
+                   android:layout_weight="1"
+                   android:background="@android:drawable/btn_dropdown">
+
+          </Spinner>
+
+
+      </LinearLayout>
+      <LinearLayout
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+          <Spinner android:id="@+id/sp8"
+                   android:layout_width="0dp"
+                   android:layout_height="50dp"
+                   android:layout_weight="1"
+                   android:background="@android:drawable/btn_dropdown">
+
+          </Spinner>
+
+
+      </LinearLayout>
+      <LinearLayout
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+          <Spinner android:id="@+id/sp9"
+                   android:layout_width="0dp"
+                   android:layout_height="50dp"
+                   android:layout_weight="1"
+                   android:background="@android:drawable/btn_dropdown">
+
+          </Spinner>
+
+
+      </LinearLayout>
+      <LinearLayout
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+          <Spinner android:id="@+id/sp10"
+                   android:layout_width="0dp"
+                   android:layout_height="50dp"
+                   android:layout_weight="1"
+                   android:background="@android:drawable/btn_dropdown">
+
+          </Spinner>
+
+
+      </LinearLayout>
+      <LinearLayout
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+          <Spinner android:id="@+id/sp11"
+                   android:layout_width="0dp"
+                   android:layout_height="50dp"
+                   android:layout_weight="1"
+                   android:background="@android:drawable/btn_dropdown">
+
+          </Spinner>
+
+
+      </LinearLayout>
+      <LinearLayout
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+          <Spinner android:id="@+id/sp12"
+                   android:layout_width="0dp"
+                   android:layout_height="50dp"
+                   android:layout_weight="1"
+                   android:background="@android:drawable/btn_dropdown">
+
+          </Spinner>
+
+
+      </LinearLayout>
+      <LinearLayout
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+          <Spinner android:id="@+id/sp13"
+                   android:layout_width="0dp"
+                   android:layout_height="50dp"
+                   android:layout_weight="1"
+                   android:background="@android:drawable/btn_dropdown">
+
+          </Spinner>
+
+
+      </LinearLayout>
+      <LinearLayout
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+          <Spinner android:id="@+id/sp14"
+                   android:layout_width="0dp"
+                   android:layout_height="50dp"
+                   android:layout_weight="1"
+                   android:background="@android:drawable/btn_dropdown">
+
+          </Spinner>
+
+
+      </LinearLayout>
+
 
 
   </LinearLayout>
