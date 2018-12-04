@@ -28,6 +28,10 @@
     <item name="android:shadowRadius">50</item>
   </style>
 
+  <style name="charText">
+    <item name="android:textSize">10sp</item>
+  </style>
+
 
 
 
