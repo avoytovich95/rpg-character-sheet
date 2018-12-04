@@ -9,8 +9,8 @@ import android.support.v7.app.ActionBarDrawerToggle
 import android.support.v7.app.AppCompatActivity
 import android.view.Menu
 import android.view.MenuItem
-import android.widget.TextView
 import com.arbys.rpgcharactersheetmaker.characterSheet.CharacterSheet
+import com.example.darki.rpgcreator.fragments.SPellsFragment
 import com.example.darki.rpgcreator.fragments.StatsFragment
 import kotlinx.android.synthetic.main.activity_character_sheet.*
 import kotlinx.android.synthetic.main.app_bar_character_sheet.*
@@ -21,12 +21,14 @@ const val PARAM_1 = "CharacterSheet"
 class CharacterSheetActivity :
     AppCompatActivity(),
     NavigationView.OnNavigationItemSelectedListener,
-    StatsFragment.OnFragmentInteractionListener {
+    StatsFragment.OnFragmentInteractionListener,
+    SPellsFragment.OnFragmentInteractionListener{
 
     lateinit var cs: CharacterSheet
 
     lateinit var statsFrag: Fragment
     lateinit var inventoryFrag: Fragment
+    lateinit var spellFrag: Fragment
     lateinit var moneyFrag: Fragment
     lateinit var equipedFrag: Fragment
     lateinit var charFrag: Fragment
@@ -54,6 +56,7 @@ class CharacterSheetActivity :
         nav_view.setNavigationItemSelectedListener(this)
 
         statsFrag = StatsFragment.newInstance(cs.stats, cs.skills)
+        spellFrag = SPellsFragment.newInstance(cs.spells)
     }
 
     override fun onBackPressed() {
@@ -70,9 +73,6 @@ class CharacterSheetActivity :
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
         when (item.itemId) {
             R.id.action_settings -> return true
             else -> return super.onOptionsItemSelected(item)
@@ -88,7 +88,12 @@ class CharacterSheetActivity :
                     .commit()
             }
             R.id.inventory -> {}
-            R.id.spells -> {}
+            R.id.spells -> {
+                supportFragmentManager
+                    .beginTransaction()
+                    .replace(R.id.fragment_container, spellFrag)
+                    .commit()
+            }
             R.id.money -> {}
             R.id.equipped -> {}
             R.id.skills -> {}

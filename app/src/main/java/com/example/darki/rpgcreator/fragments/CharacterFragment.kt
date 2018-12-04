@@ -1,4 +1,4 @@
-package com.example.darki.rpgcreator
+package com.example.darki.rpgcreator.fragments
 
 import android.content.Context
 import android.net.Uri
@@ -7,6 +7,7 @@ import android.support.v4.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import com.example.darki.rpgcreator.R
 
 
 // TODO: Rename parameter arguments, choose names that match

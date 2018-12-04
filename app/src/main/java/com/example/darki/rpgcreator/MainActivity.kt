@@ -70,7 +70,17 @@ class MainActivity : AppCompatActivity() {
         }
         cs.spells.run {
             add(Spell().run {
-
+                this.spellName = "Arcane Burst"
+                this.castingTime = "1 turn"
+                this.damageEffect = "Destroys a players weapon"
+                this.rangeArea = "2 tiles"
+                this
+            })
+            add(Spell().run {
+                this.spellName = "Fire Blast"
+                this.castingTime = "1 second"
+                this.damageEffect = "3 health, burns player"
+                this.duration = "2 turns"
                 this
             })
         }
