@@ -10,6 +10,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
+            android:id="@+id/characterPage"
     >
         <LinearLayout
                 android:background="@drawable/char_border2"
@@ -25,7 +26,8 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:padding="20dp"
-                    android:text="name"
+                    android:id="@+id/name"
+
             />
 
             <TextView
@@ -34,7 +36,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:padding="20dp"
-                    android:text="race"
+                    android:id="@+id/race"
             />
             <TextView
 
@@ -42,7 +44,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:padding="20dp"
-                    android:text="class"
+                    android:id="@+id/chaClass"
             />
 
         </LinearLayout>
@@ -60,7 +62,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:padding="20dp"
-                    android:text="level"
+                    android:id="@+id/lvl"
             />
 
             <TextView
@@ -69,7 +71,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:padding="20dp"
-                    android:text="background"
+                    android:id="@+id/backg"
             />
 
             <TextView
@@ -78,7 +80,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:padding="20dp"
-                    android:text="alingment"
+                    android:id="@+id/aline"
             />
         </LinearLayout>
 
@@ -94,7 +96,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:padding="20dp"
-                    android:text="Ex points"
+                    android:id="@+id/xp"
             />
 
             <TextView
@@ -104,7 +106,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:padding="20dp"
-                    android:text="xp next level"
+                    android:id="@+id/xpNxt"
             />
 
         </LinearLayout>
