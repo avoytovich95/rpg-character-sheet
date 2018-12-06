@@ -32,7 +32,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun createCharacterSheet() {
-        cs.allignment = ""
+        cs.allignment = "Good"
         cs.characterBackground = "Sailor"
         cs.characterClass = "Rogue"
         cs.race = "Gnome"
@@ -41,24 +41,24 @@ class MainActivity : AppCompatActivity() {
         cs.equipment.run {
             add(Item().run {
                 cost = 3
-                itemAttributes.add("Shiny")
-                itemName = "Great sword"
-                itemType = "Weapon"
-                notes.add("An exceptional weapon")
-                weight = 15
+                itemAttributes.add("Small and Sturdy")
+                itemName = "Short Bow"
+                itemType = "ranged weapon(simple,bow)"
+                notes.add("Piercing, Range, two-Handed")
+                weight = 2
                 this
             })
             add(Item().run {
                 cost = 62
                 itemAttributes.add("Really hot")
-                itemName = "Fire wand"
-                itemType = "Magical weapon"
-                notes.add("It gets really hot when you tough it")
-                weight = 3
+                itemName = "Dagger"
+                itemType = "melee weapon(simple, dagger)"
+                notes.add("Piercing, Light, Range, Thrown")
+                weight = 1
                 this
             })
         }
-        cs.allignment = ""
+        cs.allignment = "good"
         cs.experiace = "15"
         cs.faction = ""
         cs.inventory.run {
