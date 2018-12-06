@@ -6,6 +6,6 @@
              android:background="@drawable/gradient"
              tools:context=".fragments.SkillsFragment">
 
- 
+
 
 </FrameLayout>
