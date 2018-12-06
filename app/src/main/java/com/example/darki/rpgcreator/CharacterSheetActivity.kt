@@ -22,7 +22,7 @@ class CharacterSheetActivity :
     AppCompatActivity(),
     NavigationView.OnNavigationItemSelectedListener,
     StatsFragment.OnFragmentInteractionListener,
-    SPellsFragment.OnFragmentInteractionListener,
+    SpellsFragment.OnFragmentInteractionListener,
     InventoryFragment.OnFragmentInteractionListener,
     CharacterFragment.OnFragmentInteractionListener{
 
@@ -59,8 +59,9 @@ class CharacterSheetActivity :
         nav_view.setNavigationItemSelectedListener(this)
 
         statsFrag = StatsFragment.newInstance(cs.stats, cs.skills)
-        spellFrag = SPellsFragment.newInstance(cs.spells)
-        inventoryFrag = InventoryFragment.newInstance(cs.inventory)
+        spellFrag = SpellsFragment.newInstance(cs.spells)
+        inventoryFrag = InventoryFragment.newInstance(cs.inventory, "Inventory")
+        equipedFrag = InventoryFragment.newInstance(cs.equipment, "Equipment")
         charFrag = CharacterFragment.newInstance(cs)
 //        moneyFrag = MoneyFragments.newInstance(m.coins,"")
 
@@ -117,7 +118,12 @@ class CharacterSheetActivity :
 //                    .replace(R.id.fragment_container, moneyFrag)
 //                    .commit()
             }
-            R.id.equipped -> {}
+            R.id.equipped -> {
+                supportFragmentManager
+                    .beginTransaction()
+                    .replace(R.id.fragment_container, equipedFrag)
+                    .commit()
+            }
             R.id.skills -> {}
             R.id.character -> {
                 supportFragmentManager

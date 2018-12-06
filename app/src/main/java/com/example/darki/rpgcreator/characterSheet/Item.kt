@@ -12,18 +12,12 @@ class Item: Serializable {
 
     fun getAttributesList(): ArrayList<String> {
         val list = ArrayList<String>()
-        if (itemName != "")
-            list += "Item Name: $itemName"
         if (itemType != "")
             list += "Item Type: $itemType"
-        if (weight != 0)
-            list += "Weight: $weight"
-        if (cost != 0)
-            list += "Cost: $cost"
-        if (!itemAttributes.isEmpty())
-            list += "Item Attributes: " + list.addAll(itemAttributes)
-        if (!notes.isEmpty())
-            list += "Notes: " + list.addAll(notes)
+        list += "Weight: $weight"
+        list += "Cost: $cost"
+        itemAttributes.forEach { a -> list += "attr: $a" }
+        notes.forEach { n -> list += "note: $n" }
         return list
     }
 
