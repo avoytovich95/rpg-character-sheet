@@ -7,4 +7,11 @@ class Money: Serializable {
     val valuables = HashMap<String, Valuable>()
 }
 
-class Valuable(var quantity: Int, var cost: Int): Serializable
+class Valuable(var quantity: Int, var cost: Int): Serializable {
+    fun toList(): ArrayList<String> {
+        val list = ArrayList<String>()
+        list += "Quantity $quantity"
+        list += "Cost: $cost"
+        return list
+    }
+}

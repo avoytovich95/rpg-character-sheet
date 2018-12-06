@@ -24,7 +24,8 @@ class CharacterSheetActivity :
     StatsFragment.OnFragmentInteractionListener,
     SpellsFragment.OnFragmentInteractionListener,
     InventoryFragment.OnFragmentInteractionListener,
-    CharacterFragment.OnFragmentInteractionListener{
+    CharacterFragment.OnFragmentInteractionListener,
+    MoneyFragment.OnFragmentInteractionListener{
 
     lateinit var cs: CharacterSheet
     lateinit var m: Money
@@ -39,6 +40,7 @@ class CharacterSheetActivity :
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_character_sheet)
+
         cs = intent.getSerializableExtra(PARAM_1) as CharacterSheet
 
         title = cs.characterName
@@ -63,7 +65,7 @@ class CharacterSheetActivity :
         inventoryFrag = InventoryFragment.newInstance(cs.inventory, "Inventory")
         equipedFrag = InventoryFragment.newInstance(cs.equipment, "Equipment")
         charFrag = CharacterFragment.newInstance(cs)
-//        moneyFrag = MoneyFragments.newInstance(m.coins,"")
+        moneyFrag = MoneyFragment.newInstance(cs.money)
 
 
         supportFragmentManager
@@ -113,10 +115,10 @@ class CharacterSheetActivity :
                     .commit()
             }
             R.id.money -> {
-//                supportFragmentManager
-//                    .beginTransaction()
-//                    .replace(R.id.fragment_container, moneyFrag)
-//                    .commit()
+                supportFragmentManager
+                    .beginTransaction()
+                    .replace(R.id.fragment_container, moneyFrag)
+                    .commit()
             }
             R.id.equipped -> {
                 supportFragmentManager

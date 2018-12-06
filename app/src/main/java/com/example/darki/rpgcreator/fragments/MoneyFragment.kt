@@ -2,31 +2,32 @@ package com.example.darki.rpgcreator.fragments
 
 import android.content.Context
 import android.net.Uri
+import android.os.Build
 import android.os.Bundle
+import android.support.annotation.RequiresApi
 import android.support.v4.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.arbys.rpgcharactersheetmaker.characterSheet.Money
-import com.arbys.rpgcharactersheetmaker.characterSheet.Stats
+import com.example.darki.rpgcreator.ListAdapter
 import com.example.darki.rpgcreator.R
 import kotlinx.android.synthetic.main.fragment_money.view.*
 
 private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
 
 
-class MoneyFragments : Fragment() {
-
+class MoneyFragment : Fragment() {
     private var money: Money? = null
-    private var param2: String? = null
+    private var headers: List<String>? = null
+    private var valueList: HashMap<String, List<String>>? = null
+
     private var listener: OnFragmentInteractionListener? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         arguments?.let {
             money = it.getSerializable(ARG_PARAM1) as Money
-            param2 = it.getString(ARG_PARAM2)
         }
     }
 
@@ -36,15 +37,31 @@ class MoneyFragments : Fragment() {
     ): View? {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_money, container, false).run {
-            this.money.setText(money!!.money.toString())
-
+            coins.setText("${money!!.coins}gp")
+            prepareList()
+            val adapter =
+                ListAdapter(this@MoneyFragment.context!!, headers!!, valueList!!)
+            valuable_list.setAdapter(adapter)
             this
         }
     }
 
+    fun prepareList() {
+        headers = ArrayList()
+        valueList = HashMap()
+
+        for (x in money!!.valuables.asIterable()) {
+            println("${x.key}: ${x.value}")
+            (headers as ArrayList<String>) += x.key
+            valueList!![x.key] = x.value.toList()
+        }
+        println(headers)
+        println(valueList)
+    }
+
     override fun onAttach(context: Context) {
         super.onAttach(context)
-        if (context is MoneyFragments.OnFragmentInteractionListener) {
+        if (context is MoneyFragment.OnFragmentInteractionListener) {
             listener = context
         } else {
             throw RuntimeException(context.toString() + " must implement OnFragmentInteractionListener")
@@ -72,11 +89,10 @@ class MoneyFragments : Fragment() {
          */
         // TODO: Rename and change types and number of parameters
         @JvmStatic
-        fun newInstance(param1: Int, param2: String) =
-            MoneyFragments().apply {
+        fun newInstance(param1: Money) =
+            MoneyFragment().apply {
                 arguments = Bundle().apply {
-                    putInt(ARG_PARAM1, param1)
-                    putString(ARG_PARAM2, param2)
+                    putSerializable(ARG_PARAM1, param1)
                 }
             }
     }

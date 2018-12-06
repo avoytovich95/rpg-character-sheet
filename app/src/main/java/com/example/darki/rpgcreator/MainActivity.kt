@@ -8,6 +8,7 @@ import android.widget.LinearLayout
 import com.arbys.rpgcharactersheetmaker.characterSheet.CharacterSheet
 import com.arbys.rpgcharactersheetmaker.characterSheet.Item
 import com.arbys.rpgcharactersheetmaker.characterSheet.Spell
+import com.arbys.rpgcharactersheetmaker.characterSheet.Valuable
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
@@ -34,6 +35,7 @@ class MainActivity : AppCompatActivity() {
         cs.allignment = ""
         cs.characterBackground = "Sailor"
         cs.characterClass = "Rogue"
+        cs.race = "Gnome"
         cs.level = "1"
         cs.characterName = "Riker"
         cs.equipment.run {
@@ -84,6 +86,12 @@ class MainActivity : AppCompatActivity() {
                 this.duration = "2 turns"
                 this
             })
+        }
+        cs.money.coins = 425
+        cs.money.valuables.run {
+            put("Gold Ring", Valuable(2, 76))
+            put("Sapphire", Valuable(1, 125))
+            put("Emerald", Valuable(1, 150))
         }
     }
 }

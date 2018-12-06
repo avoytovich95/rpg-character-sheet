@@ -8,6 +8,7 @@ class CharacterSheet: Serializable {
     val spells = ArrayList<Spell>()
     val equipment = ArrayList<Item>()
     val skills = Skills()
+    val money = Money()
 
     var characterClass = ""
     var characterBackground =""
